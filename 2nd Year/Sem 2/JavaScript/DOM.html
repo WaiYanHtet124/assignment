@@ -1,0 +1,19 @@
+
+<html lang="en"> 
+<head> 
+<title>getElementById example</title> 
+</head> 
+<body> 
+<p id="para">This is a paragraph.</p> 
+<button onclick="changeColor('blue');">blue</button> 
+<button onclick="changeColor('red');">red</button> 
+</body> 
+
+<script>
+    function changeColor(newColor) { 
+    const elem = document.getElementById('para'); 
+    elem.style.color = newColor; 
+}
+
+    </script>
+</html> 

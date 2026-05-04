@@ -1,0 +1,52 @@
+import pickle
+def FileData(filename,data):
+    try:
+        with open(filename,'w') as file:
+            for info in data:
+                information=f'Model:{info['Model']}  Vehicle ID:{info['Vehicle ID']}  Rental Day:{(info['Rental Day'])} Daily Rate:{(info['Daily Rate'])}\n'
+                file.write(information)
+    except IOError as e:
+       print("Error writing to file :{e}")
+def read_data(filename):
+    try:
+        with open(filename,"r") as file:
+            for _ in file:
+                file.read()
+    except IOError as e:
+        print("Error reading the file")
+    except FileNotFoundError as n:
+        print(f"Filename with {filename} not found") 
+data=[]
+while True:
+    print("Enter 'insert' to store records to file,'search' to search vehicle info,or 'exit' to stop.")
+    n=input("Enter command:").strip()
+    if n.lower() == 'insert':
+        model=input("Enter vehicle model:").strip()
+        ID=input("Enter vehicle ID:").strip()
+        rent=int(input("Enter rental day:").strip())
+        rate=float(input("Enter daily rate :").strip())
+        data.append({
+        'Model':model,
+        'Vehicle ID':ID,
+        'Rental Day':rent,
+        'Daily Rate':rate,
+        'tax':(rent*rate)+(rent*rate)*0.07
+         })
+        filename=('Car.pkle')
+        FileData(filename,data)
+        print("Record saved.")
+    elif n.lower()=='search':
+        read_data(filename)
+        sth=input("Enter Vehicle ID or Model to search:")
+        found=[info for info in data if sth.lower()==info['Model'].lower() or sth.lower()==info['Vehicle ID'].lower()]
+        if(found):
+            print("Vehicle Found :")
+            for a in found:
+                print(f'Model   :{a['Model']}')
+                print(f'Vehicle ID:{a['Vehicle ID']}')
+                print(f'Rental Days:{a['Rental Day']}')
+                print(f'Daily Rate:{a['Daily Rate']}')
+                print(f'Total Cost(+7%tax):{a['tax']}')
+    elif n.lower()=='exit':
+        print("Program ended")
+        break

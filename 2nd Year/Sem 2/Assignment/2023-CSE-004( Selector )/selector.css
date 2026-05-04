@@ -1,0 +1,96 @@
+
+        *{
+            padding: 0;
+            margin: 0;
+            background-color: black;
+            color: white;
+        }
+        h1{
+            margin-bottom: 10vh;
+        }
+        h1[align="center"]{
+            background-color: aqua;
+            color: black;
+            font-size: 40px;
+        }
+        #id1{
+            margin-bottom: 8vh;
+            margin-left: 10vh;
+        }
+        #id2{
+            margin-left: 10vh;
+        }
+        .class{
+            text-align: center;
+            margin-bottom: 5vh;
+            font-size: 25px;
+        }
+        ul>li{
+            padding: 5;
+            font-size: 18px;
+        }
+        ul li{
+            color: aqua;
+        }
+        h2 + p{
+            color: red;
+        }
+        h2 ~ p{
+            margin-left: 10vh;
+            margin-bottom: 2vh;
+        }
+        .pseudoClass1:active{
+            color: red;
+        }
+        .pseudoClass2:hover{
+            color: aqua;
+        }
+        .pseudoClass3:visited{
+            color: yellow;
+        }
+        p:lang(it) {
+            color: black;
+            background-color: yellow;
+        }
+        input:focus{
+            border: 5px solid lightblue;
+            box-shadow: 10px 10px 10px black;
+            color: blue;
+            width: 250px;
+        }
+        h4:first-child{
+            color: blue;
+            font-style: italic;
+        }
+        p::first-letter{
+            font-size: xx-large;
+        }
+        .f_line::first-line{
+            color: red;
+        }
+        h4::before {
+            content: "";
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background-image: url(rose.jpg);
+            background-size: cover;
+            margin-right: 8px;
+        }
+        h4::after {
+            content: "";
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background-image: url(rose.jpg);
+            background-size: cover;
+            margin-left: 8px;
+        }
+        ::selection {
+            color: red;
+            background: yellow;
+        }
+        ::marker {
+            color: red;
+            font-size: 23px;
+        }

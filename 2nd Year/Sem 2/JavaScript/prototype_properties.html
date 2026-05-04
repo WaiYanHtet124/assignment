@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>    
+   <head>      
+      <title>JavaScript Array Object</title>              
+      <script>          
+         function book(title, author){            
+            this.title = title;              
+            this.author  = author;          
+         }      
+      </script>          
+   </head>    
+   <body>              
+      <script>          
+         var myBook = new book("Java", "John");
+         book.prototype.price = null;          
+         myBook.price = 300;                    
+         document.write("Book title is : " + myBook.title + "<br>");          
+         document.write("Book author is : " + myBook.author + "<br>");          
+         document.write("Book price is : " + myBook.price + "<br>");    
+         document.write(myBook);
+      </script>        
+   </body>
+</html>

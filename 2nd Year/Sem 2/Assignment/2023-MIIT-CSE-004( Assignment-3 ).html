@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        width: 35%;
+        border: 4px solid black;
+        background-color: cyan;
+      }
+      tr,
+      td {
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="" name="StudentRegistration"></form>
+    <table
+      cellpadding="2"
+      width="35%"
+      bgcolor="cyan"
+      align="center"
+      cellpadding="3"
+    >
+      <tr>
+        <td colspan="2" align="center">
+          <h3>Student Registration Form</h3>
+        </td>
+      </tr>
+      <tr>
+        <td><label for="txtname" size="50">Name</label></td>
+        <td><input type="text" name="textnames" id="txtname" size="30" /></td>
+      </tr>
+      <tr>
+        <td>Father Name</td>
+        <td>
+          <input type="text" name="Fathername" id="Fathername" size="30" />
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center">
+          <fieldset>
+            <legend>Sex</legend>
+            <input type="radio" name="sex" value="male" size="10" />Male
+            <input type="radio" name="sex" value="Female" size="10" />Female
+          </fieldset>
+        </td>
+      </tr>
+      <tr>
+        <td>DOB</td>
+        <td><input type="date" name="dob" id="dob" size="30" /></td>
+      </tr>
+      <tr>
+        <td>Mobile No</td>
+        <td><input type="text" name="mobileno" id="mobileno" size="30" /></td>
+      </tr>
+      <tr>
+        <td size="50">Adress</td>
+        <td><textarea rows="3" cols="26"></textarea></td>
+      </tr>
+      <tr>
+        <td>City</td>
+        <td>
+          <select name="City">
+            <option value="-1" selected>select..</option>
+            <option value="Yangon">YANGON</option>
+            <option value="Mandalay">MANDALAY</option>
+            <option value="Taunggyi">SHAN</option>
+            <option value="NAYPYIDAW">NAYPYIDAW</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>District</td>
+        <td>
+          <select name="District">
+            <option value="-1">Select....</option>
+            <option value="Yangon">Yangon</option>
+            <option value="Mandalay">Mandalay</option>
+            <option value="Naypyitaw">Shan</option>
+            <option value="Taunggyi">Naypyidaw</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Course</td>
+        <td>
+          <input list="course" name="Course" />
+          <datalist id="course">
+            <option value="cse1010">C Programming Language</option>
+            <option value="cse1020">Foundations of Web Programming</option>
+            <option value="SE">Software Engineering</option>
+            <option value="DBMS">Database Management System</option>
+          </datalist>
+        </td>
+      </tr>
+      <tr>
+        <td>PinCode</td>
+        <td><input type="text" name="pincode" id="pincode" size="30" /></td>
+      </tr>
+      <tr>
+        <td>Email Adress</td>
+        <td><input type="email" name="emailid" id="emailid" size="30" /></td>
+      </tr>
+      <tr>
+        <td>Interested</td>
+        <td height="40px">
+          <input type="checkbox" name="fb" id="fb" /> Football <br />
+          <input type="checkbox" name="sw" id="sw" /> Swimming <br />
+          <input type="checkbox" name="re" id="re" /> Reading <br />
+        </td>
+      </tr>
+      <tr align="center">
+        <td><input type="reset" /></td>
+        <td><input type="submit" value="Sumit Form" /></td>
+      </tr>
+    </table>
+  </body>
+</html>
