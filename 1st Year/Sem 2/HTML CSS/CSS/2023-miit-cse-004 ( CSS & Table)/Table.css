@@ -1,0 +1,36 @@
+body {
+	font-family: arial;
+}
+
+table,tr,td {
+	border: 2px solid black;
+	border-collapse: collapse;
+}
+table {
+	width: 700px;
+	color: blue;
+	font-weight: bold;
+	border: 5.5px solid black;
+	border-top-color: grey;
+	border-left-color: grey;
+	border-bottom-color: black;
+	border-right-color: black;
+	margin: auto;
+}
+tr:nth-child(even){
+	background-color: cyan;
+}
+tr:nth-child(odd){
+	background-color: pink;
+}
+td {
+	width: 100px;
+	height: 70px;
+	text-align: center;
+}
+#L {
+	text-orientation: upright;
+	writing-mode: vertical-lr;
+	letter-spacing: 20px;
+	font-size: 28px;
+}

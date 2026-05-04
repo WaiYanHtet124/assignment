@@ -1,0 +1,117 @@
+* {
+	box-sizing: border-box;
+	margin-left: 0;
+	margin-right: 0;
+	margin-bottom: 0;
+}
+body {
+	margin-top: 30px;
+	font-family: apple;
+	font-size: 15px;
+	display: flex;
+	min-height: 100vh;
+  	flex-direction: column;
+  	justify-content: space-between;
+}
+.whole {
+	margin: auto;
+	width: 550px;
+	border: 1px solid lightgrey;
+}
+.header {
+	margin-top: 0px;
+	padding: 10px 20px 5px 20px;
+	background-color: rgba(0,0,0,.03);
+	border-bottom: 1px solid lightgrey;
+}
+
+/* Left Side */
+img {
+	width: 100%;
+	height: auto;
+}
+.form {
+	margin-top: 35px;
+	margin-left: 55px;
+}
+.formControl {
+	height: 35px;
+	width: 85%;
+	margin-bottom: 20px;
+	background-color: lightgoldenrodyellow;
+}
+label {
+	font-size: 15px;
+}
+
+
+/* buttons */
+
+.bt1 {
+	font-size: 15px;
+	margin-top: 20px;
+	width: 85%;
+	height: 35px;
+	color: white;
+	border: none;
+	background-color: #422d3d;
+	cursor: pointer;
+
+}
+
+.bt2 {
+	font-size: 15px;
+	border: none;
+	background-color: #ced4da;
+	color: black;
+	width: 85%;
+	height: 35px;
+	margin-top: 20px;
+	margin-bottom: 25px;
+	cursor: pointer;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.split {
+	float: left;
+	width: 50%;
+}
+
+/* Right Side */
+.c:link {
+	text-decoration: none;
+}
+.c:visited {
+	color: black;
+	text-decoration: none;
+}
+.c:hover {
+	text-decoration: underline;
+}
+
+/* Photo */
+.q {
+	width: 14px;
+	cursor: pointer;
+}
+
+.footer {
+	color: white;
+	background-color: #373a3c;
+	height: auto;
+	width: 100%;
+}
+ul {
+	list-style-type: none;
+	padding-bottom: 20px;
+}
+.f {
+	color: white;
+}
+li {
+	padding-left: 42px;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		legend{
+			border-radius: 10px;
+			background-color: black;
+			color: white;
+			width: auto;
+			padding: 10px;
+			letter-spacing: 2px;
+		}
+		fieldset{
+			border-radius: 10px;
+			line-height: 30px;
+
+		}
+
+		div#center{
+			width: 40%;
+			margin:auto;
+		}
+		body{
+			font-family: arial;
+			font-weight:bold ;
+		}
+	</style>
+	<script type="text/javascript">
+		function calccir(){
+			var radius=document.getElementById("radius").value;
+			var pi=document.getElementById("pi").value;
+			var cir=2*pi*radius;
+			document.getElementById("circum").innerHTML=cir;
+		}
+		function calcarea(){
+			var radius=document.getElementById("radius").value;
+			var pi=document.getElementById("pi").value;
+			var area=radius*radius*pi;
+			document.getElementById("area").innerHTML=area;
+		}
+	</script>
+</head>
+<body>
+<div id="center">
+	<form>
+		<fieldset>
+			<legend>Calculation</legend>
+			<table>
+				<tr>
+					<td>Enter radius:</td>
+					<td>
+						<input type="text" id="radius"/>
+					</td>
+				</tr>
+				<tr>
+					<td>Enter pi value : </td>
+					<td>
+						<input type="text" id="pi"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<button type="button" onclick="calccir">Circumference</button>
+						<button type="button" onclick="calcarea()">Area</button>
+					</td>
+					<td>
+						<button type="reset">Reset</button>
+					</td>
+				</tr>
+				<tr>
+					<tr>
+						<td>The Circumference :</td>
+						<td>
+							<span id="circum"></span>
+						</td>
+					</tr>
+					<tr>
+						<td>The Area &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</td>
+						<td><span id="area"></span></td>
+					</tr>
+				</tr>
+			</table>
+		</fieldset>
+	</form>
+</div>
+</body>
+</html>

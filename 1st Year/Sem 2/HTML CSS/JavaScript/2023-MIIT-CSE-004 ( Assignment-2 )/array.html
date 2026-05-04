@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Array Sample</title>
+	<style>
+		body{
+			font-size:18px;
+		}
+	</style>
+	<script>
+		var color=['red','orange','pink','yellow','white','black','magenta','purple'];
+
+		 document.write("Colors Array: "+color+"<br>");
+		 document.write("Colors Array: ");
+		 document.write(color[2]+","+color[3]+","+color[4]+"<br>");
+		 color.splice(3,0,'blue');
+		 color.splice(4,0,'green');
+		 color.splice(5,0,'brown');
+		 document.write("Color Arrays: "+color+"<br>");
+		 color.splice(4,3);
+		 document.write("Color Arrays: "+color+"<br>");
+		 const positionO=color.indexOf('orange');
+		 const positionB=color.indexOf('black')
+		 document.write("Location of orange color is: "+positionO+"<br>");
+		 document.write("Location of orange color is: "+positionB);
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+    legend{
+      border-radius:10px;
+      background-color: gray;
+      color:white;
+      width:auto;
+      padding:10px;
+      letter-spacing:2px;
+    }
+    fieldset{
+      border-radius:10px;
+      line-height:10px;
+    }
+    .text{
+      height:30px;
+      border:4px solid gray;
+      border-radius:15px;
+      font-weight:bold;
+      font-size:15px;
+    }
+    div#center{
+      width:40%;
+      margin:auto;
+    }
+    body{
+      font-family:arial;
+      color:black;
+    }
+    .btn{
+      text-align:center;
+      height:30px;
+      width:100px;
+      border:2px solid white;
+      border-radius:15px;
+      padding-top:1px;
+      padding-bottom:3px;
+      background-color: gray;
+      color:black;
+      font-size:15px;
+      font-weight:bold;
+    }
+  </style>
+</head>
+<body>
+<script>
+  function match(){
+    var str=document.getElementById("input").value;
+        var str2=document.getElementById("ptn").value;
+        const pattern=new RegExp(str2,"gi");
+        var result=str.match(pattern);
+        if(!str2){
+          document.getElementById("error").innerHTML = 'Please Fill Up';
+        } else {
+          document.getElementById("result").innerHTML = result;
+        }
+      }
+</script>
+<div id="center">
+  <legend>
+  <form>
+    <table cellspacing="30px">
+      <tr>
+        <td> Enter text string :<input type="text" id="input" class="text"></td>
+      </tr>
+      <tr>
+        <td>Enter pattern string:<input type="text" id="ptn" class="text"></td>
+        </tr>
+        <tr>
+          <td align="center"><button type="button" class="btn" onclick="match()">Match</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Match:</span><span id="result"></span></td>
+          </tr>
+        </table>
+      </form>
+      </legend>
+</body>
+</html>

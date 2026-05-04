@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style type="text/css">
+    legend{
+      border-radius: 10px;
+      background-color: black;
+      color: white;
+      width: auto;
+      padding: 10px;
+      letter-spacing: 2px;
+    }
+    fieldset{
+      border-radius: 10px;
+      background-color: light gray;
+      line-height: 30px;
+    }
+    form{
+      font-weight: bold;
+
+    }
+    div#center{
+      width: 40%;
+      margin: auto;
+    }
+    body{
+      font-family: arial;
+    }
+    .light{
+      font-weight: bold;font-family: arial;
+    }
+  </style>
+  <script type="text/javascript">
+    function calcsupply(){
+      var maxAge=100;
+      var age=document.getElementById("age").value;
+      var tea=document.getElementById("tea").value;
+      var supply=(tea*365)*(maxAge-age);
+      document.getElementById("supply").innerHTML=supply+' cups';
+    }
+  </script>
+</head>
+<body>
+  <div id="center">
+<fieldset>
+  <legend>Lifetime Supply</legend>
+  <table>
+    <tr>
+      <td>Enter age&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</td>
+      <td>
+        <input type="text" id="age"/>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Enter cups of tea :
+      </td>
+      <td>
+        <input type="text" id="tea"/>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <button type="button" onclick="calcsupply()">
+          <span class="light">Calculate</span>
+        </button>
+      </td>
+    </tr>
+    <tr>
+      <td class="light">The amount of consumed :</td>
+      <td class="light">
+        <span id="supply"></span>
+      </td>
+    </tr>
+  </table>
+</fieldset>
+</div>
+</body>
+</html>

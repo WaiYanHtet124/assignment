@@ -1,0 +1,17 @@
+Algorithm and Pseudo code for problem6
+
+Algorithm
+
+Step1: Start
+Step2: Declare variables cm, feet, inches, height
+Step3: Read value for cm, feet, inches, height
+Step4: Multiply feet, 12 and add with inches again multiply with cm(2.54) and assign the result in height
+Step5: Display height 
+Step6: Stop
+
+Pseudo code
+BEGIN
+DECLARE               cm, feet, inches, height
+READ     	  cm, feet, inches, height
+COMPUTE             height=((feet*12) +inches) * cm
+DISPLAY  	   height

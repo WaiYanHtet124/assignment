@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script type="text/javascript">
+		function getCube(){
+			var number = document.getElementById("number").value;
+			var cube = number*number*number;
+			var result = "The cube of " + number + " is " + cube;
+			document.getElementById("result").innerHTML=result;
+		}
+	</script>
+</head>
+<body>
+	<form>
+		Enter no: <input type="text" id="number"><br>
+		<input type="button" onclick="getCube()" value="cube">
+		<p id="result"></p>
+	</form>
+</body>
+</html>

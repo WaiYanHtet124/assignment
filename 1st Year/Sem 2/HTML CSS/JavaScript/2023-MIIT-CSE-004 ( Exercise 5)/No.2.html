@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>No.2</title>
+	<script>
+		function showSelectedCheckboxes(){
+			const checkboxes=document.querySelectorAll('input[type="checkbox"]');
+			const selected=[];
+			checkboxes.forEach(checkbox=>{
+                  if (checkbox.checked){
+                  	selected.push(checkbox.value);
+                  }
+			});
+			if (selected.length>0){
+				alert("You have selected: "+selected.join(" , "));
+			}
+			else{
+				alert("No checkboxes selected.");
+			}
+		}
+	</script>
+</head>
+<body>
+<h2>Select Your Options</h2>
+<form>
+	<label><input type="checkbox" value="Option 1">Option 1</label><br>
+	<label><input type="checkbox" value="Option 2">Option 2</label><br>
+	<label><input type="checkbox" value="Option 3">Option 3</label><br>
+	<label><input type="checkbox" value="Option 4">Option 4</label><br><br>
+    &nbsp;<button type="button" onclick="showSelectedCheckboxes()">Show Selected</button>
+</form>
+</body>
+</html>

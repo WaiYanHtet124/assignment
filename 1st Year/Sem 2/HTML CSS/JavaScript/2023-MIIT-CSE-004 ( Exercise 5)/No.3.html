@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>No.3</title>
+	<script type="text/javascript">
+		function result(){
+			var name = document.getElementById('name').value;
+			var gender = document.gg.gender.value;
+			alert("User info : " + name + " " + gender);
+		}
+	</script>
+</head>
+<body>
+	<form name="gg">
+		<table>
+			<tr>
+				<td>Enter name <input id="name" type="text" name=""></td>
+			</tr>
+			<tr>
+				<td>
+					Male <input type="radio" name="gender" value="Male">
+					Female <input type="radio" name="gender" value="Female">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="button" value="User Gender" onclick="result()">
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>No.1</title>
+  <style>
+    body{
+      font-family:arial;
+      font-weight:bold;
+    }
+    legend{
+      border-radius:10px;
+      background-color:black;
+      color:white;
+      width:auto;
+      padding:10px;
+      font-size:20px;
+      letter-spacing: 1.2px;
+    }
+    fieldset{
+      height:auto;
+      line-height:30px;
+
+    }
+    form{
+      font-weight:bold;
+    }
+    p{
+      color:black;
+      font-weight:bold;
+      font-family:arial;
+
+    }
+    table,tr,td{
+      border:none;
+    }
+        div#center{
+          width:40%;
+          margin:auto;
+        }
+  </style>
+  <script>
+    function supply(){
+    var maxAge=100;
+    var age=document.getElementById("Age").value;
+    var tea=document.getElementById("Tea").value;
+    var Cups=(tea*365)*(maxAge-age);
+
+    if(!age || !tea){
+      document.getElementById("error").innerHTML="Please Fill Up";
+      document.getElementById("error2").innerHTML="Please Fill Up";
+    } else {
+      document.getElementById("Supply").innerHTML=Cups+'cups';
+    }
+  }
+  </script>
+</head>
+<body>
+<div id="center">
+<form>
+<fieldset>
+  <legend>Lifetime Supply</legend>
+  <table>
+    <tr>
+      <td> Enter age&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</td>
+      <td><input type="text" id="Age"></td>
+    </tr>
+
+    <tr>
+      <td colspan="2" style="color: red;" id="error"></td>
+    </tr>
+    
+    <tr>
+      <td> Enter cups of tea:</td>
+      <td><input type="text" id="Tea"></td>
+    </tr>
+
+    <tr>
+      <td colspan="2" style="color: red;" id="error2"></td>
+    </tr>
+    
+    <tr>
+      <td>
+        <button type="button" onclick="supply()">Calculate</button>
+      </td>
+      <td><button type="reset">Reset</button></td>
+    </tr>
+
+    <tr>
+      <td> The amount of consumed:</td>
+      <td><span id="Supply"></span></td>
+    </tr>
+    </table>
+</fieldset>
+</form>
+</div>
+</body>
+</html>

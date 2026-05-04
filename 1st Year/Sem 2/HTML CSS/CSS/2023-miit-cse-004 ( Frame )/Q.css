@@ -1,0 +1,42 @@
+a{
+        text-decoration: none;
+        display: block;
+        text-align: center;
+        height: 30px;width: 100px;
+        border:2px solid white;
+        border-radius: 15px;
+        padding-top: 10px;
+        background-color: orange;
+        color:white;
+        font-weight: bold;
+}
+#nav {
+        float: left; width: 150px;
+        background-image: url(5.jpg);color: white;
+        font-size: 20px;
+        height: 200px;
+}
+#sidebar {
+        float: right;
+        width: 200px;
+}
+#center {
+        margin: 0 240px 0 200px; 
+        padding: 1px 10px 10px 10px;
+        background-color: #FFCCCC;;
+        color: #006600;
+        text-align: justify;
+}
+#floatright{
+        margin: 3px;
+        float: right;
+}
+#footer{
+        clear: both;
+}
+.c{
+        margin: 0 240px 0 200px;
+}
+body{
+        font-size: 18px;
+}
